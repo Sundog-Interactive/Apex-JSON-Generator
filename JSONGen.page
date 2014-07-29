@@ -1,0 +1,13 @@
+<apex:page controller="MyJSONController">
+<apex:pageMessages />
+
+<apex:form >
+	<p>Enter Valid JSON Text:</p>
+	<apex:inputTextarea id="jsontext" value="{!jsonText}"/><p/>
+	<p>Enter class name to generate:</p>
+	<apex:inputText value="{!className}"/><p/>
+	<apex:commandButton value="Submit" action="{!processJSON}"/><p/>
+</apex:form>
+
+<apex:outputText value="{!classesText}" escape="false"/>
+</apex:page>
